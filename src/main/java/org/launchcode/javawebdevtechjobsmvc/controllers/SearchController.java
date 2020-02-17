@@ -17,7 +17,7 @@ import static org.launchcode.javawebdevtechjobsmvc.models.JobData.findAll;
  */
 @Controller
 @RequestMapping("search")
-public class SearchController {
+public class SearchController extends TechJobsController {
 
     @RequestMapping(value = "")
     public String search(Model model) {
@@ -28,7 +28,7 @@ public class SearchController {
         return "search";
     }
 
-    // TODO #3 - Create a handler to process a search request and render the updated search view. Complete
+    // TODO #3 - Create a handler to process a search request and render the updated search view. COMPLETE
     @RequestMapping(value = "results")
     public String processSearchAndUpdateView(Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
         ArrayList<Job> jobs;
